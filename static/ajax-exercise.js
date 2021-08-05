@@ -25,7 +25,7 @@ function showWeather(evt) {
      // TODO: request weather with that URL and show the forecast in #weather-info
     const url = "/weather.json";
     const formData = {"zipcode": $("#zipcode-field").val()};
-    $.get(url, formData, (res)  => {
+    $.get(url, formData, (res)  => { //sending a get request to the weather.json route with formData as the input
         $('#weather-info').html(res['forecast'] + " And the temp is: " + res['temp']);
     })
 
@@ -43,8 +43,8 @@ function orderMelons(evt) {
 
 
     const formInputs = {
-        'qty': $('#qty-field').val(),
-        'melon_type': $('#melon-type-field').val()
+        'melon_type': $('#melon-type-field').val(),
+        'qty': $('#qty-field').val()
       };
     
     // TODO: show the result message after your form
